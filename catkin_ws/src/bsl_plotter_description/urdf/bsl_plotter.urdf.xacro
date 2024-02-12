@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot name="bsl_plotter" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find bsl_plotter_description)/urdf/bsl_plotter.xacro" />
+  <xacro:include filename="$(find bsl_plotter_description)/urdf/bsl_plotter.ros2_control.xacro" />
+
+  <link name="world"/>
+
+  <xacro:bsl_plotter parent="world">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </xacro:bsl_plotter>
+
+  <xacro:bsl_plotter_ros2_control name="bsl_plotter_ros2_control" />
+</robot>
